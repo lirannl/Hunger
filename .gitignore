@@ -4,6 +4,7 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
+servers.dat
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
@@ -42,3 +43,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 mods
+asm
+saves
+logs

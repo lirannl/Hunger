@@ -1,0 +1,149 @@
+---- Minecraft Crash Report ----
+// Quite honestly, I wouldn't worry myself about that.
+
+Time: 11:04 07/11/14
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.NoClassDefFoundError: vazkii/botania/common/item/equipment/bauble/ItemTinyPlanet
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:162)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:515)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:239)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:480)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:867)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+Caused by: java.lang.NoClassDefFoundError: vazkii/botania/common/item/equipment/bauble/ItemTinyPlanet
+	at vazkii.botania.common.core.proxy.CommonProxy.preInit(CommonProxy.java:70)
+	at vazkii.botania.common.Botania.preInit(Botania.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:513)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:208)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:187)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:118)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:513)
+	... 10 more
+Caused by: java.lang.ClassNotFoundException: vazkii.botania.common.item.equipment.bauble.ItemTinyPlanet
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 38 more
+Caused by: java.lang.NoClassDefFoundError: vazkii/botania/common/item/equipment/bauble/ItemBauble
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.security.SecureClassLoader.defineClass(Unknown Source)
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:182)
+	... 40 more
+Caused by: java.lang.ClassNotFoundException: vazkii.botania.common.item.equipment.bauble.ItemBauble
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:101)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 44 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_11, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 180810512 bytes (172 MB) / 428515328 bytes (408 MB) up to 1060372480 bytes (1011 MB)
+	JVM Flags: 6 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx1G -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:-UseAdaptiveSizePolicy -Xmn128M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.85.1235 Minecraft Forge 10.13.2.1235 65 mods loaded, 65 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized
+	FML{7.10.85.1235} [Forge Mod Loader] (forge-1.7.10-10.13.2.1235.jar) Unloaded->Constructed->Pre-initialized
+	Forge{10.13.2.1235} [Minecraft Forge] (forge-1.7.10-10.13.2.1235.jar) Unloaded->Constructed->Pre-initialized
+	appliedenergistics2-core{rv1-stable-1} [AppliedEnergistics2 Core] (minecraft.jar) Unloaded->Constructed->Pre-initialized
+	CodeChickenCore{1.0.4.29} [CodeChicken Core] (minecraft.jar) Unloaded->Constructed->Pre-initialized
+	<CoFH ASM>{000} [CoFH ASM Data Initialization] (minecraft.jar) Unloaded->Constructed->Pre-initialized
+	Micdoodlecore{} [Micdoodle8 Core] (minecraft.jar) Unloaded->Constructed->Pre-initialized
+	NotEnoughItems{1.0.3.62} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.3.62-universal.jar) Unloaded->Constructed->Pre-initialized
+	OpenModsCore{@VERSION@} [OpenModsCore] (minecraft.jar) Unloaded->Constructed->Pre-initialized
+	AppleCore{1.0.0} [AppleCore] (AppleCore-mc1.7.10-1.0.0.jar) Unloaded->Constructed->Pre-initialized
+	appliedenergistics2{rv1-stable-1} [Applied Energistics 2] (appliedenergistics2-rv1-stable-1.jar) Unloaded->Constructed->Pre-initialized
+	bdlib{1.5.0.31} [BD Lib] (bdlib-mc1710-1.5.0.31.jar) Unloaded->Constructed->Pre-initialized
+	BiblioCraft{1.7.5} [BiblioCraft] (BiblioCraft[v1.7.5][MC1.7.10].jar) Unloaded->Constructed->Pre-initialized
+	BiblioWoodsForestry{1.5} [BiblioWoods Forestry Edition] (BiblioWoods[Forestry][v1.5].jar) Unloaded->Constructed->Pre-initialized
+	CoFHCore{1.7.10R3.0.0B6} [CoFH Core] (CoFHCore-[1.7.10]3.0.0B6-32.jar) Unloaded->Constructed->Pre-initialized
+	ThermalFoundation{1.7.10R1.0.0B3} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.0.0B3-8.jar) Unloaded->Constructed->Pre-initialized
+	ThermalExpansion{1.7.10R4.0.0B5} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.0.0B5-13.jar) Unloaded->Constructed->Pre-initialized
+	BigReactors{0.4.0rc10} [Big Reactors] (BigReactors-0.4.0rc10.jar) Unloaded->Constructed->Pre-initialized
+	AWWayofTime{v1.2.0Beta23} [Blood Magic: Alchemical Wizardry] (Blood Magic-v1.2.0Beta23(1.7.10).jar) Unloaded->Constructed->Pre-initialized
+	Botania{r1.2-132} [Botania] (Botania r1.2-132.jar) Unloaded->Constructed->Errored
+	BuildCraft|Core{6.1.5} [BuildCraft] (buildcraft-6.1.5.jar) Unloaded->Constructed->Pre-initialized
+	BuildCraft|Builders{6.1.5} [BC Builders] (buildcraft-6.1.5.jar) Unloaded->Constructed->Pre-initialized
+	BuildCraft|Transport{6.1.5} [BC Transport] (buildcraft-6.1.5.jar) Unloaded->Constructed->Pre-initialized
+	BuildCraft|Silicon{6.1.5} [BC Silicon] (buildcraft-6.1.5.jar) Unloaded->Constructed->Pre-initialized
+	BuildCraft|Factory{6.1.5} [BC Factory] (buildcraft-6.1.5.jar) Unloaded->Constructed->Pre-initialized
+	BuildCraft|Energy{6.1.5} [BC Energy] (buildcraft-6.1.5.jar) Unloaded->Constructed->Pre-initialized
+	CarpentersBlocks{3.2.7} [Carpenter's Blocks] (Carpenter's Blocks v3.2.7 - MC 1.7.10.zip) Unloaded->Constructed->Pre-initialized
+	ChickenChunks{1.3.4.13} [ChickenChunks] (ChickenChunks-1.7.10-1.3.4.13-universal.jar) Unloaded->Constructed->Pre-initialized
+	chisel{1.5.6b} [Chisel] (Chisel-1.7.10-1.5.6b.jar) Unloaded->Constructed->Pre-initialized
+	CompactMachines{1.7.10-1.10} [Compact Machines] (compactmachines-1.7.10-1.10.jar) Unloaded->Constructed->Pre-initialized
+	ComputerCraft{1.65} [ComputerCraft] (ComputerCraft1.65.jar) Unloaded->Constructed->Pre-initialized
+	GalacticraftCore{3.0.5} [Galacticraft Core] (GalacticraftCore-BETA-1.7-3.0.5.229.jar) Unloaded->Constructed->Pre-initialized
+	GalacticraftMars{3.0.5} [Galacticraft Planets] (Galacticraft-Planets-BETA-1.7-3.0.5.229.jar) Unloaded->Constructed->Pre-initialized
+	HardcoreQuesting{The Journey (4.2.1)} [Hardcore Questing Mode] (HQM-The Journey (4.2.1).jar) Unloaded->Constructed->Pre-initialized
+	harvestcraft{1.7.2d} [Pam's HarvestCraft] (Pam's HarvestCraft 1.7.10a.zip) Unloaded->Constructed->Pre-initialized
+	Mantle{1.7.10-0.3.2.jenkins184} [Mantle] (Mantle-1.7.10-0.3.2.jar) Unloaded->Constructed->Pre-initialized
+	TConstruct{1.7.10-1.7.1.build771} [Tinkers' Construct] (TConstruct-1.7.10-1.7.1c.jar) Unloaded->Constructed->Pre-initialized
+	HungerOverhaul{1.7.10-beta.2.jenkins30} [Hunger Overhaul] (HungerOverhaul-1.7.10-beta.2.jar) Unloaded->Constructed->Pre-initialized
+	inventorytweaks{1.59-dev-152-cf6e263} [Inventory Tweaks] (InventoryTweaks-1.59-dev-152.jar) Unloaded->Constructed->Pre-initialized
+	IronChest{6.0.56.739} [Iron Chest] (ironchest-1.7.10-6.0.56.739-universal.jar) Unloaded->Constructed->Pre-initialized
+	LogisticsPipes{0.8.1.75} [Logistics Pipes] (logisticspipes-0.8.1.75.jar) Unloaded->Constructed->Pre-initialized
+	ForgeMultipart{1.1.0.297} [Forge Multipart] (ForgeMultipart-1.7.10-1.1.0.297-universal.jar) Unloaded->Constructed->Pre-initialized
+	Mekanism{7.1.0} [Mekanism] (Mekanism-1.7.10-7.1.0.92.jar) Unloaded->Constructed->Pre-initialized
+	MekanismGenerators{7.1.0} [MekanismGenerators] (MekanismGenerators-1.7.10-7.1.0.92.jar) Unloaded->Constructed->Pre-initialized
+	MekanismTools{7.1.0} [MekanismTools] (MekanismTools-1.7.10-7.1.0.92.jar) Unloaded->Constructed->Pre-initialized
+	MineMenu{1.2.0} [MineMenu] (MineMenu-1.7.10-1.2.0.B44-universal.jar) Unloaded->Constructed->Pre-initialized
+	MineTweaker3{3.0.9} [MineTweaker 3] (MineTweaker3-1.7.10-3.0.9.jar) Unloaded->Constructed->Pre-initialized
+	ModTweaker{0.6} [ModTweaker] (ModTweaker-1.7.X-0.6-22.jar) Unloaded->Constructed->Pre-initialized
+	numina{0.4.0.98} [Numina] (Numina-0.4.0.98.jar) Unloaded->Constructed->Pre-initialized
+	powersuits{0.11.0.174} [MachineMuse's Modular Powersuits] (ModularPowersuits-0.11.0.174.jar) Unloaded->Constructed->Pre-initialized
+	NEIAddons{1.12.2.9} [NEI Addons] (neiaddons-mc1710-1.12.2.9.jar) Unloaded->Constructed->Pre-initialized
+	NEIAddons|Botany{1.12.2.9} [NEI Addons: Botany] (neiaddons-mc1710-1.12.2.9.jar) Unloaded->Constructed->Pre-initialized
+	NEIAddons|Forestry{1.12.2.9} [NEI Addons: Forestry] (neiaddons-mc1710-1.12.2.9.jar) Unloaded->Constructed->Pre-initialized
+	NEIAddons|CraftingTables{1.12.2.9} [NEI Addons: Crafting Tables] (neiaddons-mc1710-1.12.2.9.jar) Unloaded->Constructed->Pre-initialized
+	NEIAddons|ExNihilo{1.12.2.9} [NEI Addons: Ex Nihilo] (neiaddons-mc1710-1.12.2.9.jar) Unloaded->Constructed->Pre-initialized
+	NEIPlugins{1.1.0.11-unofficial} [NEI Plugins Unofficial] (NEIPlugins-MC1.7.10-1.1.0.11-unofficial.jar) Unloaded->Constructed->Pre-initialized
+	OpenMods{0.6} [OpenMods] (OpenModsLib-1.7.10-0.6-snapshot-224.jar) Unloaded->Constructed->Pre-initialized
+	OpenBlocks{1.3} [OpenBlocks] (OpenBlocks-1.7.10-1.3-snapshot-433.jar) Unloaded->Constructed->Pre-initialized
+	PerfectSpawn{1.1} [Perfect Spawn] (PerfectSpawn-1.1.jar) Unloaded->Constructed->Pre-initialized
+	SpiceOfLife{1.2.2} [The Spice of Life] (SpiceOfLife-mc1.7.10-1.2.2.jar) Unloaded->Constructed->Pre-initialized
+	StevesFactoryManager{A93} [Steve's Factory Manager] (StevesFactoryManagerA93.jar) Unloaded->Constructed->Pre-initialized
+	StevesWorkshop{0.5.1} [Steve's Workshop] (StevesWorkshop-0.5.1.jar) Unloaded->Constructed->Pre-initialized
+	TiCTooltips{1.1.11b} [TiC Tooltips] (TiCTooltips-mc1.7.10-1.1.11b.jar) Unloaded->Constructed->Pre-initialized
+	McMultipart{1.1.0.297} [Minecraft Multipart Plugin] (ForgeMultipart-1.7.10-1.1.0.297-universal.jar) Unloaded->Constructed->Pre-initialized
+	ForgeMicroblock{1.1.0.297} [Forge Microblocks] (ForgeMultipart-1.7.10-1.1.0.297-universal.jar) Unloaded->Constructed->Pre-initialized
+	AE2 Version: stable rv1-stable-1 for Forge 10.13.0.1187
+	Mantle Environment: Environment healthy.
+	TConstruct Environment: Environment healthy.
