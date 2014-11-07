@@ -91,13 +91,14 @@ key_waila.keybind.wailadisplay:79
 key_waila.keybind.liquid:80
 key_waila.keybind.recipe:81
 key_waila.keybind.usage:75
-key_[GC] Galaxy Map:50
-key_[GC] Open Spaceship Inventory:33
-key_[GC] Toggle Sensor Goggles Mode:37
 key_key.tarmor:24
 key_key.tgoggles:34
 key_key.tbelt:48
 key_key.tzoom:44
+key_Baubles Inventory:48
+key_[GC] Galaxy Map:50
+key_[GC] Open Spaceship Inventory:33
+key_[GC] Toggle Sensor Goggles Mode:37
 key_invtweaks.key.sort:19
 key_Mekanism Mode Switch:50
 key_Mekanism Voice:22
@@ -107,7 +108,6 @@ key_Cycle Tool Backward (MPS):-1
 key_Cycle Tool Forward (MPS):-1
 key_Zoom (MPS):21
 key_Cosmetic (MPS):-1
-key_Baubles Inventory:48
 key_key.control:29
 soundCategory_master:1.0
 soundCategory_music:1.0
